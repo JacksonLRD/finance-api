@@ -1,7 +1,8 @@
 import Container from './container.class.js';
 
 /**
- * @param service {string}
+ * @param service {string} name of the service to inject
+ * @returns {function(*, {kind: *}): function(*): (*)}
  */
 export default function inject(service) {
   return function (value, { kind }) {

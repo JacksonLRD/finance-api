@@ -1,5 +1,5 @@
-import inject from '../../decorators/inject.decorator.js';
-import * as validators from './transactionValidators.js';
+import inject from '../../decorators/dependency-injection/inject.decorator.js';
+import * as validators from './transaction.validators.js';
 
 export default class TransactionController {
   @inject('TransactionService')

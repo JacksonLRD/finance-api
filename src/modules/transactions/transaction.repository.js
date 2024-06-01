@@ -1,4 +1,4 @@
-import injectable from '../../decorators/injectable.decorator';
+import injectable from '../../decorators/dependency-injection/injectable.decorator';
 
 @injectable()
 export default class TransactionRepository {

@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import { transactionRouter } from '../modules/transactions/transactionRouter.js';
+import { transactionRouter } from '../modules/transactions/transaction.router.js';
 
 const apiRouter = new Router();
 

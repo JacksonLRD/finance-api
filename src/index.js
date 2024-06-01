@@ -1,7 +1,5 @@
 import 'dotenv/config';
-
-import './modules/transactions/TransactionRepository.js';
-import './modules/transactions/TransactionService.js';
+import './config/dependencies.js';
 
 import app from './app.js';
 

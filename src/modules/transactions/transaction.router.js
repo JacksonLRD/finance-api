@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import TransactionController from './TransactionController.js';
+import TransactionController from './transaction.controller.js';
 
 const transactionRouter = new Router();
 const controller = new TransactionController();
