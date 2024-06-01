@@ -1,8 +1,12 @@
 import Container from './container.class.js';
 
-export default function injectable() {
+export default function injectable(serviceName = '') {
   return (value, { name }) => {
-    Container.set(name, value);
-    console.log(`Container.get: ${name}`, Container.get(name));
+    if (typeof serviceName === 'string' && serviceName !== '') {
+      console.log(`injectable: ${serviceName}`);
+      return Container.set(serviceName, value);
+    }
+    console.log(`injectable: ${name}`);
+    return Container.set(name, value);
   };
 }
