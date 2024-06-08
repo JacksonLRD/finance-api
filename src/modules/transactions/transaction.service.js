@@ -3,10 +3,10 @@ import injectable from '../../decorators/dependency-injection/injectable.decorat
 
 @injectable()
 export default class TransactionService {
-  @inject('TransactionRepository')
-  #repository;
+  @inject('TransactionModel')
+  #model;
 
   async create(transaction) {
-    return this.#repository.create(transaction);
+    return this.#model.create(transaction);
   }
 }
