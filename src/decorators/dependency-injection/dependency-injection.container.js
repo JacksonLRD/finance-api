@@ -1,8 +1,7 @@
-export default class Container {
+export default class DependencyInjectionContainer {
   static #services = new Map();
 
   static set(name, service) {
-    console.log('Container.set', name, service);
     this.#services.set(name, new service());
   }
 

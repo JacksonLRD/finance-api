@@ -1,4 +1,4 @@
-import Container from './container.class.js';
+import DependencyInjectionContainer from './dependency-injection.container.js';
 
 /**
  * @param service {string} name of the service to be injected
@@ -6,11 +6,9 @@ import Container from './container.class.js';
 export default function injectable(service = '') {
   return (value, { name }) => {
     if (typeof service === 'string' && service !== '') {
-      console.log(`injectable: ${service}`);
-      Container.set(service, value);
+      DependencyInjectionContainer.set(service, value);
       return;
     }
-    console.log(`injectable: ${name}`);
-    Container.set(name, value);
+    DependencyInjectionContainer.set(name, value);
   };
 }

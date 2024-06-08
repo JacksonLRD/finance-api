@@ -1,4 +1,4 @@
-import Container from './container.class.js';
+import DependencyInjectionContainer from './dependency-injection.container.js';
 
 /**
  * @param service {string} name of the service to inject
@@ -14,7 +14,7 @@ export default function inject(service) {
       if (initialValue) {
         return initialValue;
       }
-      return Container.get(service);
+      return DependencyInjectionContainer.get(service);
     };
   };
 }
